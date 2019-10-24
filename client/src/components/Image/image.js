@@ -7,7 +7,6 @@ const Image = (props) => {
     background-image: url('${props => props.primaryimageurl}'), url('${props => props.primaryimageurl}');
 	background-size: cover, 5% 5%;
     background-position: center;
-    background-blend-mode: overlay;
     height:60vh;
     width: 60%;
     display:flex;
