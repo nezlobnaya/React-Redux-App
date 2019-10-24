@@ -1,10 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import Image from '../Image/Image'
 
-const ImageList = (props) => {
+const ImageList = () => {
+    const objects = useSelector(state => state.objects)
     return(
         <div className='container'>
-        {props.objects.map(item => <Image key={item.objectid} {...item} />)}
+        {objects.map(item => <Image key={item.objectid} {...item} />)}
         </div>
     )
 }

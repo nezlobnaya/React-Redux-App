@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { fetchData } from './actions'
 import ImageList from './components/ImageList/ImageList'
 import styled from 'styled-components'
@@ -29,43 +29,29 @@ const Intro = styled.div`
     border-radius: 5px;
     background   : none;
     cursor       : pointer;
-    ${'' /* -webkit-appearance: none;
-   -webkit-transform: rotate(-1.5deg);
-    -moz-transform: rotate(-1.5deg);
-    -ms-transform: rotate(-1.5deg);
-    -o-transform: rotate(-1.5deg);
-    transform: rotate(-1.5deg); */}
     background-color: rgb(222, 250, 246);
     box-shadow: 10px 10px 5px grey;
   `
 
-function App(props) {
+function App() {
+  const state = useSelector(state => state)
+  const dispatch = useDispatch()
+  console.log('State', state)
   return (
     <div className="App">
       <Intro>
         <h1>TEN FRAGMENTS</h1> <p>from the collections of the <a href="https://www.harvardartmuseums.org">Harvard Art Museums</a>.</p>
-      <Button onClick={props.fetchData}>
-        {props.isLoading ? (
+      <Button onClick={() => dispatch(fetchData())}>
+        {state.isLoading ? (
           'Loading'
         ) : (
           <h2>Get the Images!</h2>
         )}
       </Button>
       </Intro>
-      <ImageList objects={props.objects} />
+      <ImageList  />
     </div>
   );
 }
 
-const mapStateToProps = state => {
-  return {
-    isLoading: state.isLoading,
-    objects: state.objects,
-    error: state.error
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  { fetchData }
-)(App)
+export default App
