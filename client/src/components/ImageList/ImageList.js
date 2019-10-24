@@ -3,9 +3,9 @@ import Image from '../Image/Image'
 
 const ImageList = (props) => {
     return(
-        <>
-        {props.objects.map((item,index) => <Image key={item.index} {...item} />)}
-        </>
+        <div className='container'>
+        {props.objects.map(item => <Image key={item.objectid} {...item} />)}
+        </div>
     )
 }
 

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 0, auto
 }
 
 .App-logo {
@@ -19,4 +20,12 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.container {
+  margin: auto 0;
+}
+
+a {
+  decoration: none
 }

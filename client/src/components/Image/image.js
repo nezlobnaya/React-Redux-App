@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const Image = (props) => {
     console.log('Image props', props)
+    
     const Tile = styled.div`
     background-image: url('${props => props.primaryimageurl}'), url('${props => props.primaryimageurl}');
 	background-size: cover, 5% 5%;
@@ -12,9 +13,9 @@ const Image = (props) => {
     display:flex;
     justify-content:center;
     align-items:center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     vertical-align: center;
-    border-top: 15px solid #c2fe59;
+    border-top: 15px solid ;
     padding: 0;
     margin-left: 25rem
     `;
@@ -22,18 +23,19 @@ const Image = (props) => {
     const Caption = styled.div`
     text-align: right;
     max-width:50%;
+    margin-left: 25rem
     `
 
     const Title = styled.p`
-    background-color: #c2fe59;
+    background-color: none;
     padding-right: 5px;
     `;
 
     return(
         <div>
-            <Tile primaryimageurl={props.primaryimageurl}>
-                <Caption><Title>{props.title} <a href={props.url}>{props.objectnumber}</a></Title></Caption>
-            </Tile>
+            <Tile primaryimageurl={props.primaryimageurl} />
+                <Caption><Title>{props.title} {props.creditline} <a href={props.url}>{props.objectnumber}</a></Title></Caption>
+           
         </div>
     )
 }

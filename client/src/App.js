@@ -19,11 +19,24 @@ const Intro = styled.div`
   `;
 
   const Button = styled.button`
-  background-color: rgb(222, 250, 246);
-  border: 3px solid #020;
-  padding: 20px 40px;
-  margin-top: 30px;
-  border-radius:20px;
+  border: 1px dotted rgb(97, 93, 93);
+    border-radius: 10px;
+    font-family : sans-serif;
+    font-size   : 100%;
+    padding      : 15px 10px 5px 5px;
+    font         : bold .6em sans-serif;
+    border       : 2px solid #333;
+    border-radius: 5px;
+    background   : none;
+    cursor       : pointer;
+    ${'' /* -webkit-appearance: none;
+   -webkit-transform: rotate(-1.5deg);
+    -moz-transform: rotate(-1.5deg);
+    -ms-transform: rotate(-1.5deg);
+    -o-transform: rotate(-1.5deg);
+    transform: rotate(-1.5deg); */}
+    background-color: rgb(222, 250, 246);
+    box-shadow: 10px 10px 5px grey;
   `
 
 function App(props) {
@@ -35,7 +48,7 @@ function App(props) {
         {props.isLoading ? (
           'Loading'
         ) : (
-          'Generate'
+          <h2>Get the Images!</h2>
         )}
       </Button>
       </Intro>
