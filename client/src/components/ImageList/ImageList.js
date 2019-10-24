@@ -1,12 +1,12 @@
-import React from 'react';
-import Image from '../Image/image'
+import React from 'react'
+import Image from '../Image/Image'
 
 const ImageList = (props) => {
-    return ( 
+    return(
         <>
-        {props.objects.map(item => <Image key={item.id} {...item} />)}
+        {props.objects.map((item,index) => <Image key={item.index} {...item} />)}
         </>
-     );
+    )
 }
- 
-export default ImageList;
+
+export default ImageList

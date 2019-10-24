@@ -11,13 +11,15 @@ export const reducer = (state = initialState, action) => {
         case FETCH_ART_DATA_START:
             return {
                 ...state,
-                isLoading: true
+                isLoading: true,
+                error: null
             }
         case FETCH_ART_DATA_SUCCESS:
             return {
                 ...state,
                 isLoading: false,
-                objects: action.payload
+                objects: action.payload,
+                error: null
             }
         case FETCH_ART_DATA_FAILURE:
             return {
