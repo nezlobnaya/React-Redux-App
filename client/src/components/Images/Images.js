@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Image from '../Image/Image';
 
-const ImageList = () => {
+const Images = () => {
     const objects = useSelector(state => state.objects)
     return(
         <div className='container'>
@@ -11,4 +11,4 @@ const ImageList = () => {
     )
 }
 
-export default ImageList
+export default Images;

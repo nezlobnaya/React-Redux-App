@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchData } from './actions'
-import ImageList from './components/ImageList/ImageList'
+import Images from './components/Images/Images';
 import styled from 'styled-components'
 
 import './App.css';
@@ -49,7 +49,7 @@ function App() {
           )}
         </Button>
       </Intro>
-      <ImageList />
+      <Images />
     </div>
   );
 }
