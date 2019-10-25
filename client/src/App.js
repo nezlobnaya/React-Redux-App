@@ -40,16 +40,16 @@ function App() {
   return (
     <div className="App">
       <Intro>
-        <h1>TEN FRAGMENTS</h1> <p>from the collections of the <a href="https://www.harvardartmuseums.org">Harvard Art Museums</a>.</p>
-      <Button onClick={() => dispatch(fetchData())}>
-        {state.isLoading ? (
-          'Loading'
-        ) : (
-          <h2>Get the Images!</h2>
-        )}
-      </Button>
+          <h1>TEN FRAGMENTS</h1> <p>from the collections of the <a href="https://www.harvardartmuseums.org">Harvard Art Museums</a>.</p>
+        <Button onClick={() => dispatch(fetchData())}>
+          {state.isLoading ? (
+            'Loading'
+          ) : (
+            <h2>Get the Images!</h2>
+          )}
+        </Button>
       </Intro>
-      <ImageList  />
+      <ImageList />
     </div>
   );
 }
