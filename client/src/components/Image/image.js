@@ -1,4 +1,5 @@
 import React from 'react';
+// import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 
 const Image = (props) => {
@@ -34,7 +35,7 @@ const Image = (props) => {
     return(
         <div>
             <Tile primaryimageurl={props.primaryimageurl} />
-                <Caption><Title>{props.title} {props.creditline} <a href={props.url}>{props.objectnumber}</a></Title></Caption>
+                <Caption><Title>{props.title} {props.creditline} <a target='_blank' rel='noopener noreferrer' href={props.url}>{props.objectnumber}</a></Title></Caption>
            
         </div>
     )
