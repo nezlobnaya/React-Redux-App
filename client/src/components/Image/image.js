@@ -22,7 +22,7 @@ const Image = (props) => {
     `;
 
     const Caption = styled.div`
-    text-align: right;
+    text-align: justify;
     max-width:50%;
     margin-left: 25rem
     `
@@ -35,7 +35,7 @@ const Image = (props) => {
     return(
         <div>
             <Tile primaryimageurl={props.primaryimageurl} />
-                <Caption><Title>{props.title} {props.creditline} <a target='_blank' rel='noopener noreferrer' href={props.url}>{props.objectnumber}</a></Title></Caption>
+                <Caption><Title>{`Title: ${props.title}`} <br /> {`Creditline: ${props.creditline}`}<br /> {props.period} {props.culture} <br /> {`Medium:${props.medium}`}<a target='_blank' rel='noopener noreferrer' href={props.url}>{props.objectnumber}</a></Title></Caption>
            
         </div>
     )
