@@ -6,7 +6,7 @@ const Images = () => {
     const objects = useSelector(state => state.objects)
     return(
         <div className='container'>
-        {objects.map(item => <Image key={item.objectid} {...item} />)}
+        {objects.map(item =><Image key={item.objectid} {...item} />)}
         </div>
     )
 }
