@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Image from '../Image/Image';
+import Image from '../Image/image';
 
 const Images = () => {
     const objects = useSelector(state => state.objects)
